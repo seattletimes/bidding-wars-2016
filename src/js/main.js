@@ -21,24 +21,42 @@ var mode = "aboveList";
 var hsl = (h, s, l) => `hsl(${h}, ${s}%, ${l}%)`;
 
 var scale = [
-  { limit: .2, color: hsl(200, 46, 23) },
-  { limit: .3, color: hsl(220, 46, 23) },
-  { limit: .4, color: hsl(240, 56, 23) },
-  { limit: .5, color: hsl(260, 56, 33) },
-  { limit: .6, color: hsl(280, 66, 33) },
-  { limit: .7, color: hsl(300, 66, 43) },
-  { limit: 1, color: hsl(320, 76, 43) }
+  { limit: .2, color: hsl(200, 16, 23) },
+  { limit: .3, color: hsl(220, 26, 23) },
+  { limit: .4, color: hsl(240, 26, 33) },
+  { limit: .5, color: hsl(260, 36, 33) },
+  { limit: .6, color: hsl(280, 46, 43) },
+  { limit: .7, color: hsl(300, 56, 43) },
+  { limit: 2, color: hsl(320, 66, 53) }
 ];
 
 xhr("./assets/king.geojson", function(err, data) {
   
   var paintDelta = function(feature) {
-    var from = bidding[mode][2012][feature.properties.ZIP];
+    var from = bidding[mode][2015][feature.properties.ZIP];
     var to = bidding[mode][2016][feature.properties.ZIP];
-
+    var fillColor = "transparent";
+    if (from && to) {
+      var difference = to.value - from.value;
+      console.log(feature.properties.ZIP, difference);
+      for (var i = 0; i < scale.length; i++) {
+        var pigment = scale[i];
+        if (difference <= pigment.limit * .5) {
+          fillColor = pigment.color;
+          break;
+        }
+      }
+    }
+    return {
+      fillColor,
+      weight: 1,
+      color: "rgba(0, 0, 0, .8)",
+      fillOpacity: .7
+    }
   };
 
   var paint = function(feature) {
+    if (year == "delta") return paintDelta(feature);
     var view = bidding[mode][year];
     var zip = view[feature.properties.ZIP];
     var fillColor = "transparent";

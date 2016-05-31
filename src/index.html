@@ -53,6 +53,7 @@ csv.multiple_bids.forEach(function(row) {
             <li> <a class="switch-mode" data-mode="multipleBids">Multiple bids</a>
           </ul>
           <ul class="year">
+            <li> <a class="switch-year" data-year="delta">2015-2016</a>
             <% for (var y = 2016; y >= 2012; y--) { %>
             <li> <a class="switch-year <%= y == 2016 ? "selected" : "" %>" data-year="<%= y %>"><%= y %></a>
             <% } %>
