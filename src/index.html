@@ -1,0 +1,73 @@
+<%
+//build the data sets
+var aboveList = {};
+csv.above_list.forEach(function(row) {
+  if (!aboveList[row.year]) aboveList[row.year] = {};
+  var year = aboveList[row.year];
+  if (!year[row.zip]) year[row.zip] = [];
+  year[row.zip].push(row.above_list);
+});
+
+//reduce each year
+//note: many years seem to have too few months to judge accurately
+for (var y in aboveList) {
+  for (var z in aboveList[y]) {
+    var zip = aboveList[y][z];
+    var total = zip.reduce(function(p, n) { return p + n }, 0);
+    aboveList[y][z] = Math.round(total / zip.length * 1000) / 1000;
+  }
+}
+
+var multipleBids = {};
+csv.multiple_bids.forEach(function(row) {
+  if (!multipleBids[row.year]) multipleBids[row.year] = {};
+  multipleBids[row.year][row.zip] = row.multiple_offers;
+});
+
+
+%><!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_head.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+      <main class="interactive">
+        <nav class="controls">
+          <ul class="mode">
+            <li> <a class="switch-mode" data-mode="multipleBids">Multiple bids</a>
+            <li> <a class="switch-mode" data-mode="aboveList">Above list</a>
+          </ul>
+          <ul class="year">
+            <% for (var y = 2012; y < 2017; y++) { %>
+            <li> <a class="switch-year" data-year="<%= y %>"><%= y %></a>
+            <% } %>
+          </ul>
+        </nav>
+        <div class="map-container">
+          <leaflet-map>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          </leaflet-map>
+        </div>
+      </main>
+    </responsive-child>
+
+    <script>
+window.biddingData = {
+  multipleBids: <%= JSON.stringify(multipleBids) %>,
+  aboveList: <%= JSON.stringify(aboveList) %>
+};
+    </script>
+
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

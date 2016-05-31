@@ -1,0 +1,389 @@
+year,city,county,zip,multiple_offers
+2012,,King County,98004,0.732
+2012,,King County,98006,0.804
+2012,,King County,98028,0.471
+2012,,King County,98053,0.378
+2012,,King County,98056,0.579
+2012,,King County,98059,0.571
+2012,,King County,98074,0.512
+2012,,King County,98133,0.512
+2012,,King County,98146,0.133
+2012,,King County,98155,0.563
+2012,,King County,98166,0.333
+2012,,King County,98177,0.52
+2012,,Snohomish County,98012,0.448
+2012,,Snohomish County,98021,0.4
+2012,,Snohomish County,98036,0.429
+2012,Bellevue,King County,98005,0.778
+2012,Bellevue,King County,98007,0.833
+2012,Bellevue,King County,98008,0.818
+2012,Bothell,King County,98011,0.611
+2012,Carnation,King County,98014,0.667
+2012,Duvall,King County,98019,0.2
+2012,Edmonds,Snohomish County,98020,0.222
+2012,Edmonds,Snohomish County,98026,0.6
+2012,Everett,Snohomish County,98208,0
+2012,Issaquah,King County,98027,0.48
+2012,Issaquah,King County,98029,0.636
+2012,Kent,King County,98031,0.143
+2012,Kent,King County,98042,0.6
+2012,Kirkland,King County,98033,0.712
+2012,Kirkland,King County,98034,0.514
+2012,Lynnwood,Snohomish County,98087,0.143
+2012,Maple Valley,King County,98038,0.2
+2012,Mercer Island,King County,98040,0.583
+2012,Mountlake Terrace,Snohomish County,98043,0.2
+2012,Mukilteo,Snohomish County,98275,0.667
+2012,Redmond,King County,98052,0.641
+2012,Renton,King County,98055,0.5
+2012,Renton,King County,98058,0.286
+2012,Sammamish,King County,98075,0.516
+2012,Seattle,King County,98101,0.444
+2012,Seattle,King County,98102,0.542
+2012,Seattle,King County,98103,0.683
+2012,Seattle,King County,98105,0.558
+2012,Seattle,King County,98106,0.429
+2012,Seattle,King County,98107,0.553
+2012,Seattle,King County,98108,0.1
+2012,Seattle,King County,98109,0.583
+2012,Seattle,King County,98112,0.633
+2012,Seattle,King County,98115,0.605
+2012,Seattle,King County,98116,0.371
+2012,Seattle,King County,98117,0.707
+2012,Seattle,King County,98118,0.667
+2012,Seattle,King County,98119,0.532
+2012,Seattle,King County,98121,0.375
+2012,Seattle,King County,98122,0.744
+2012,Seattle,King County,98125,0.564
+2012,Seattle,King County,98126,0.438
+2012,Seattle,King County,98136,0.391
+2012,Seattle,King County,98144,0.71
+2012,Seattle,King County,98199,0.615
+2012,Snohomish,Snohomish County,98290,0.4
+2012,Snohomish,Snohomish County,98296,0.4
+2012,Snoqualmie,King County,98065,0.333
+2012,Woodinville,,98072,0.409
+2012,Woodinville,King County,98077,0.533
+2013,,,98020,0.5
+2013,,,98036,0.316
+2013,,King County,98001,0.143
+2013,,King County,98004,0.771
+2013,,King County,98028,0.652
+2013,,King County,98042,0.545
+2013,,King County,98056,0.577
+2013,,King County,98059,0.558
+2013,,King County,98075,0.75
+2013,,King County,98133,0.522
+2013,,King County,98146,0.5
+2013,,King County,98155,0.575
+2013,,King County,98166,0.385
+2013,,King County,98168,0.167
+2013,,King County,98177,0.606
+2013,,Snohomish County,98012,0.418
+2013,Auburn,King County,98092,0
+2013,Bellevue,King County,98005,0.676
+2013,Bellevue,King County,98006,0.76
+2013,Bellevue,King County,98007,0.889
+2013,Bellevue,King County,98008,0.891
+2013,Bothell,King County,98011,0.636
+2013,Bothell,Snohomish County,98021,0.412
+2013,Duvall,King County,98019,0.571
+2013,Edmonds,Snohomish County,98026,0.688
+2013,Everett,Snohomish County,98201,0.375
+2013,Everett,Snohomish County,98203,0.333
+2013,Everett,Snohomish County,98208,0.294
+2013,Fall City,King County,98024,0.25
+2013,Federal Way,King County,98023,0.143
+2013,Issaquah,King County,98027,0.657
+2013,Issaquah,King County,98029,0.769
+2013,Kent,King County,98031,0.571
+2013,Kirkland,King County,98033,0.734
+2013,Kirkland,King County,98034,0.611
+2013,Lake Stevens,Snohomish County,98258,0.286
+2013,Lynnwood,Snohomish County,98037,0.5
+2013,Maple Valley,King County,98038,0.364
+2013,Mercer Island,King County,98040,0.7
+2013,Mountlake Terrace,Snohomish County,98043,0.4
+2013,Mukilteo,Snohomish County,98275,0.462
+2013,North Bend,King County,98045,0.5
+2013,Redmond,King County,98052,0.7
+2013,Redmond,King County,98053,0.564
+2013,Renton,King County,98055,0.8
+2013,Renton,King County,98058,0.333
+2013,Sammamish,King County,98074,0.843
+2013,Seattle,King County,98101,0.45
+2013,Seattle,King County,98102,0.583
+2013,Seattle,King County,98103,0.766
+2013,Seattle,King County,98105,0.816
+2013,Seattle,King County,98106,0.263
+2013,Seattle,King County,98107,0.754
+2013,Seattle,King County,98108,0.556
+2013,Seattle,King County,98109,0.8
+2013,Seattle,King County,98112,0.6
+2013,Seattle,King County,98115,0.728
+2013,Seattle,King County,98116,0.649
+2013,Seattle,King County,98117,0.692
+2013,Seattle,King County,98118,0.63
+2013,Seattle,King County,98119,0.435
+2013,Seattle,King County,98121,0.385
+2013,Seattle,King County,98122,0.679
+2013,Seattle,King County,98125,0.75
+2013,Seattle,King County,98126,0.615
+2013,Seattle,King County,98136,0.563
+2013,Seattle,King County,98144,0.603
+2013,Seattle,King County,98178,0.286
+2013,Seattle,King County,98199,0.661
+2013,Snohomish,Snohomish County,98290,0.571
+2013,Snohomish,Snohomish County,98296,0.65
+2013,Snoqualmie,King County,98065,0.364
+2013,Woodinville,,98072,0.714
+2013,Woodinville,,98077,0.333
+2014,,,98155,0.522
+2014,,King County,98001,0.333
+2014,,King County,98004,0.568
+2014,,King County,98028,0.621
+2014,,King County,98042,0.385
+2014,,King County,98056,0.395
+2014,,King County,98059,0.333
+2014,,King County,98074,0.56
+2014,,King County,98075,0.459
+2014,,King County,98133,0.508
+2014,,King County,98146,0.316
+2014,,King County,98166,0.188
+2014,,King County,98177,0.3
+2014,,King County,98178,0.357
+2014,,King County,98188,0.4
+2014,,Snohomish County,98012,0.299
+2014,,Snohomish County,98036,0.433
+2014,Auburn,King County,98092,0.632
+2014,Bellevue,King County,98005,0.697
+2014,Bellevue,King County,98006,0.634
+2014,Bellevue,King County,98007,0.813
+2014,Bellevue,King County,98008,0.786
+2014,Bothell,King County,98011,0.545
+2014,Bothell,Snohomish County,98021,0.288
+2014,Carnation,King County,98014,0.273
+2014,Des Moines,King County,98198,0.6
+2014,Duvall,King County,98019,0.333
+2014,Edmonds,,98020,0.25
+2014,Edmonds,Snohomish County,98026,0.214
+2014,Everett,Snohomish County,98201,0.182
+2014,Everett,Snohomish County,98203,0.154
+2014,Everett,Snohomish County,98204,0.286
+2014,Everett,Snohomish County,98208,0.226
+2014,Federal Way,King County,98023,0.273
+2014,Issaquah,King County,98027,0.6
+2014,Issaquah,King County,98029,0.484
+2014,Kent,King County,98030,0.333
+2014,Kent,King County,98031,0.3
+2014,Kirkland,King County,98033,0.643
+2014,Kirkland,King County,98034,0.61
+2014,Lake Stevens,Snohomish County,98258,0.375
+2014,Lynnwood,Snohomish County,98037,0.632
+2014,Lynnwood,Snohomish County,98087,0.524
+2014,Maple Valley,King County,98038,0.5
+2014,Marysville,Snohomish County,98270,0.167
+2014,Mercer Island,King County,98040,0.567
+2014,Monroe,Snohomish County,98272,0.214
+2014,Mountlake Terrace,Snohomish County,98043,0.533
+2014,Mukilteo,Snohomish County,98275,0.154
+2014,North Bend,King County,98045,0.556
+2014,Redmond,King County,98052,0.681
+2014,Redmond,King County,98053,0.608
+2014,Renton,King County,98058,0.333
+2014,Seattle,King County,98101,0.571
+2014,Seattle,King County,98102,0.762
+2014,Seattle,King County,98103,0.708
+2014,Seattle,King County,98105,0.658
+2014,Seattle,King County,98106,0.457
+2014,Seattle,King County,98107,0.675
+2014,Seattle,King County,98108,0.545
+2014,Seattle,King County,98109,0.609
+2014,Seattle,King County,98112,0.704
+2014,Seattle,King County,98115,0.745
+2014,Seattle,King County,98116,0.52
+2014,Seattle,King County,98117,0.663
+2014,Seattle,King County,98118,0.636
+2014,Seattle,King County,98119,0.575
+2014,Seattle,King County,98121,0.306
+2014,Seattle,King County,98122,0.644
+2014,Seattle,King County,98125,0.667
+2014,Seattle,King County,98126,0.541
+2014,Seattle,King County,98136,0.656
+2014,Seattle,King County,98144,0.576
+2014,Seattle,King County,98168,0.375
+2014,Seattle,King County,98199,0.541
+2014,Snohomish,Snohomish County,98290,0.261
+2014,Snohomish,Snohomish County,98296,0.233
+2014,Snoqualmie,King County,98065,0.364
+2014,Woodinville,,98072,0.474
+2014,Woodinville,King County,98077,0.333
+2015,,King County,98001,0.636
+2015,,King County,98004,0.642
+2015,,King County,98028,0.452
+2015,,King County,98033,0.59
+2015,,King County,98042,0.2
+2015,,King County,98056,0.522
+2015,,King County,98059,0.431
+2015,,King County,98074,0.779
+2015,,King County,98075,0.583
+2015,,King County,98133,0.788
+2015,,King County,98146,0.63
+2015,,King County,98155,0.704
+2015,,King County,98166,0.632
+2015,,King County,98168,0.5
+2015,,King County,98177,0.634
+2015,,King County,98188,0.2
+2015,,King County,98198,0.417
+2015,,Snohomish County,98012,0.315
+2015,,Snohomish County,98020,0.636
+2015,,Snohomish County,98036,0.521
+2015,,Snohomish County,98296,0.308
+2015,Arlington,Snohomish County,98223,0.111
+2015,Auburn,King County,98092,0.429
+2015,Bellevue,King County,98005,0.857
+2015,Bellevue,King County,98006,0.772
+2015,Bellevue,King County,98007,0.745
+2015,Bellevue,King County,98008,0.864
+2015,Bothell,King County,98011,0.682
+2015,Bothell,Snohomish County,98021,0.561
+2015,Carnation,King County,98014,0.667
+2015,Duvall,King County,98019,0.536
+2015,Edmonds,Snohomish County,98026,0.451
+2015,Enumclaw,King County,98022,0.25
+2015,Everett,Snohomish County,98201,0.357
+2015,Everett,Snohomish County,98203,0.296
+2015,Everett,Snohomish County,98204,0.5
+2015,Everett,Snohomish County,98208,0.483
+2015,Federal Way,King County,98003,0.667
+2015,Federal Way,King County,98023,0.333
+2015,Issaquah,King County,98027,0.692
+2015,Issaquah,King County,98029,0.694
+2015,Kent,King County,98030,0.364
+2015,Kent,King County,98031,0.579
+2015,Kent,King County,98032,0.5
+2015,Kirkland,King County,98034,0.659
+2015,Lake Stevens,Snohomish County,98258,0.463
+2015,Lynnwood,Snohomish County,98037,0.52
+2015,Lynnwood,Snohomish County,98087,0.286
+2015,Maple Valley,King County,98038,0.5
+2015,Marysville,Snohomish County,98270,0.353
+2015,Marysville,Snohomish County,98271,0.286
+2015,Mercer Island,King County,98040,0.667
+2015,Monroe,Snohomish County,98272,0.389
+2015,Mountlake Terrace,Snohomish County,98043,0.543
+2015,Mukilteo,Snohomish County,98275,0.378
+2015,North Bend,King County,98045,0.636
+2015,Redmond,King County,98052,0.732
+2015,Redmond,King County,98053,0.566
+2015,Renton,King County,98055,0.556
+2015,Renton,King County,98058,0.683
+2015,Seattle,King County,98101,0.389
+2015,Seattle,King County,98102,0.674
+2015,Seattle,King County,98103,0.86
+2015,Seattle,King County,98105,0.778
+2015,Seattle,King County,98106,0.466
+2015,Seattle,King County,98107,0.844
+2015,Seattle,King County,98108,0.583
+2015,Seattle,King County,98109,0.574
+2015,Seattle,King County,98112,0.75
+2015,Seattle,King County,98115,0.897
+2015,Seattle,King County,98116,0.743
+2015,Seattle,King County,98117,0.777
+2015,Seattle,King County,98118,0.724
+2015,Seattle,King County,98119,0.684
+2015,Seattle,King County,98121,0.515
+2015,Seattle,King County,98122,0.802
+2015,Seattle,King County,98125,0.709
+2015,Seattle,King County,98126,0.745
+2015,Seattle,King County,98136,0.707
+2015,Seattle,King County,98144,0.634
+2015,Seattle,King County,98178,0.724
+2015,Seattle,King County,98199,0.703
+2015,Snohomish,Snohomish County,98290,0.348
+2015,Snoqualmie,King County,98065,0.576
+2015,Stanwood,Snohomish County,98292,0.444
+2015,Woodinville,,98072,0.525
+2015,Woodinville,,98077,0.105
+2016,,King County,98001,0.5
+2016,,King County,98042,0.6
+2016,,King County,98056,0.5
+2016,,King County,98059,0.806
+2016,,King County,98075,0.609
+2016,,King County,98133,0.886
+2016,,King County,98146,0.667
+2016,,King County,98155,0.852
+2016,,King County,98166,0.5
+2016,,King County,98168,0.778
+2016,,King County,98177,0.87
+2016,,King County,98198,0.692
+2016,,Snohomish County,98012,0.647
+2016,,Snohomish County,98020,0.727
+2016,,Snohomish County,98036,0.731
+2016,Arlington,Snohomish County,98223,0.3
+2016,Auburn,King County,98002,0.333
+2016,Auburn,King County,98092,0.4
+2016,Bellevue,King County,98004,0.375
+2016,Bellevue,King County,98005,0.909
+2016,Bellevue,King County,98006,0.824
+2016,Bellevue,King County,98008,0.933
+2016,Bothell,King County,98011,0.786
+2016,Bothell,Snohomish County,98021,0.71
+2016,Duvall,King County,98019,0.6
+2016,Edmonds,Snohomish County,98026,0.568
+2016,Everett,Snohomish County,98201,0.429
+2016,Everett,Snohomish County,98203,0.6
+2016,Everett,Snohomish County,98208,0.545
+2016,Federal Way,King County,98003,0.846
+2016,Federal Way,King County,98023,0.667
+2016,Issaquah,King County,98027,0.622
+2016,Issaquah,King County,98029,0.867
+2016,Kenmore,King County,98028,0.929
+2016,Kent,King County,98030,0.625
+2016,Kent,King County,98031,0.846
+2016,Kent,King County,98032,0.364
+2016,Kirkland,King County,98033,0.786
+2016,Kirkland,King County,98034,0.93
+2016,Lake Stevens,Snohomish County,98258,0.385
+2016,Lynnwood,Snohomish County,98037,0.5
+2016,Lynnwood,Snohomish County,98087,0.731
+2016,Maple Valley,King County,98038,0.636
+2016,Marysville,Snohomish County,98270,0.571
+2016,Mercer Island,King County,98040,0.857
+2016,Monroe,Snohomish County,98272,0.2
+2016,Mountlake Terrace,Snohomish County,98043,0.7
+2016,Mukilteo,Snohomish County,98275,0.714
+2016,North Bend,King County,98045,0.833
+2016,Redmond,King County,98052,0.889
+2016,Redmond,King County,98053,0.313
+2016,Renton,King County,98055,0.778
+2016,Renton,King County,98058,0.87
+2016,Sammamish,King County,98074,0.778
+2016,Seattle,King County,98101,0.5
+2016,Seattle,King County,98102,0.8
+2016,Seattle,King County,98103,0.944
+2016,Seattle,King County,98105,0.947
+2016,Seattle,King County,98106,0.947
+2016,Seattle,King County,98107,0.83
+2016,Seattle,King County,98108,0.786
+2016,Seattle,King County,98109,0.828
+2016,Seattle,King County,98112,0.808
+2016,Seattle,King County,98115,0.962
+2016,Seattle,King County,98116,0.759
+2016,Seattle,King County,98117,0.854
+2016,Seattle,King County,98118,0.676
+2016,Seattle,King County,98119,0.667
+2016,Seattle,King County,98121,0.632
+2016,Seattle,King County,98122,0.809
+2016,Seattle,King County,98125,0.818
+2016,Seattle,King County,98126,0.864
+2016,Seattle,King County,98136,1
+2016,Seattle,King County,98144,0.8
+2016,Seattle,King County,98178,0.778
+2016,Seattle,King County,98199,0.519
+2016,Snohomish,Snohomish County,98290,0.625
+2016,Snohomish,Snohomish County,98296,0.545
+2016,Snoqualmie,King County,98065,0.833
+2016,Stanwood,Snohomish County,98292,0.111
+2016,Woodinville,,98072,0.842
+2016,Woodinville,King County,98077,0.6
