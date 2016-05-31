@@ -21,7 +21,7 @@ for (var y in aboveList) {
 var multipleBids = {};
 csv.multiple_bids.forEach(function(row) {
   if (!multipleBids[row.year]) multipleBids[row.year] = {};
-  multipleBids[row.year][row.zip] = row.multiple_offers;
+  multipleBids[row.year][row.zip] = row;
 });
 
 
@@ -40,12 +40,12 @@ csv.multiple_bids.forEach(function(row) {
       <main class="interactive">
         <nav class="controls">
           <ul class="mode">
-            <li> <a class="switch-mode" data-mode="multipleBids">Multiple bids</a>
+            <li> <a class="switch-mode selected" data-mode="multipleBids">Multiple bids</a>
             <li> <a class="switch-mode" data-mode="aboveList">Above list</a>
           </ul>
           <ul class="year">
             <% for (var y = 2012; y < 2017; y++) { %>
-            <li> <a class="switch-year" data-year="<%= y %>"><%= y %></a>
+            <li> <a class="switch-year <%= y == 2012 ? "selected" : "" %>" data-year="<%= y %>"><%= y %></a>
             <% } %>
           </ul>
         </nav>

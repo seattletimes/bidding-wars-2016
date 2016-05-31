@@ -1,0 +1,20 @@
+<h1>
+  <%= data.zip %> - 
+  <% if (data.city) { %>
+  <%= data.city %>, King County
+  <% } else { %>
+    King County
+  <% } %>
+</h1>
+<h2>Multiple offers</h2>
+<ul>
+<% data.multiples.forEach(function(row) { %>
+  <li> <%= row.year %> - <%= (row.multiple_offers * 100).toFixed(1) %>%
+<% }); %>
+</ul>
+<h2>Above List</h2>
+<ul>
+<% data.aboves.forEach(function(row) { %>
+  <li> <%= row.year %> - <%= (row.value * 100).toFixed(1) %>%
+<% }); %>
+</ul>
