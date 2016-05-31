@@ -5,7 +5,7 @@ csv.above_list.forEach(function(row) {
   if (!aboveList[row.year]) aboveList[row.year] = {};
   var year = aboveList[row.year];
   if (!year[row.zip]) year[row.zip] = [];
-  year[row.zip].push(row.above_list);
+  year[row.zip].push(row);
 });
 
 //reduce each year
@@ -13,15 +13,24 @@ csv.above_list.forEach(function(row) {
 for (var y in aboveList) {
   for (var z in aboveList[y]) {
     var zip = aboveList[y][z];
-    var total = zip.reduce(function(p, n) { return p + n }, 0);
-    aboveList[y][z] = Math.round(total / zip.length * 1000) / 1000;
+    var values = zip.map(function(n) { return n.above_list });
+    var total = values.reduce(function(p, n) { return p + n }, 0);
+    aboveList[y][z] = {
+      year: y,
+      value: Math.round(total / values.length * 1000) / 1000
+    }
   }
-}
+};
 
 var multipleBids = {};
 csv.multiple_bids.forEach(function(row) {
   if (!multipleBids[row.year]) multipleBids[row.year] = {};
-  multipleBids[row.year][row.zip] = row;
+  multipleBids[row.year][row.zip] = {
+    year: row.year,
+    city: row.city,
+    county: row.county,
+    value: row.multiple_offers
+  }
 });
 
 
@@ -40,12 +49,12 @@ csv.multiple_bids.forEach(function(row) {
       <main class="interactive">
         <nav class="controls">
           <ul class="mode">
-            <li> <a class="switch-mode selected" data-mode="multipleBids">Multiple bids</a>
-            <li> <a class="switch-mode" data-mode="aboveList">Above list</a>
+            <li> <a class="switch-mode selected" data-mode="aboveList">Above list</a>
+            <li> <a class="switch-mode" data-mode="multipleBids">Multiple bids</a>
           </ul>
           <ul class="year">
-            <% for (var y = 2012; y < 2017; y++) { %>
-            <li> <a class="switch-year <%= y == 2012 ? "selected" : "" %>" data-year="<%= y %>"><%= y %></a>
+            <% for (var y = 2016; y >= 2012; y--) { %>
+            <li> <a class="switch-year <%= y == 2016 ? "selected" : "" %>" data-year="<%= y %>"><%= y %></a>
             <% } %>
           </ul>
         </nav>

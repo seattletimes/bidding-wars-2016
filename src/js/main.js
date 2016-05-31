@@ -15,41 +15,46 @@ var L = mapElement.leaflet;
 var template = require("./lib/dot").compile(require("./_tooltip.html"));
 
 var bidding = window.biddingData;
-var year = 2012;
-var mode = "multipleBids";
+var year = 2016;
+var mode = "aboveList";
 
 var hsl = (h, s, l) => `hsl(${h}, ${s}%, ${l}%)`;
 
 var scale = [
-  { limit: .2, color: hsl(100, 66, 23) },
-  { limit: .3, color: hsl(120, 66, 23) },
-  { limit: .4, color: hsl(140, 66, 23) },
-  { limit: .5, color: hsl(160, 66, 23) },
-  { limit: .6, color: hsl(180, 66, 23) },
-  { limit: .7, color: hsl(200, 66, 23) },
-  { limit: 1, color: hsl(220, 66, 23) }
+  { limit: .2, color: hsl(200, 46, 23) },
+  { limit: .3, color: hsl(220, 46, 23) },
+  { limit: .4, color: hsl(240, 56, 23) },
+  { limit: .5, color: hsl(260, 56, 33) },
+  { limit: .6, color: hsl(280, 66, 33) },
+  { limit: .7, color: hsl(300, 66, 43) },
+  { limit: 1, color: hsl(320, 76, 43) }
 ];
 
 xhr("./assets/king.geojson", function(err, data) {
-  var boundary = .2;
+  
+  var paintDelta = function(feature) {
+    var from = bidding[mode][2012][feature.properties.ZIP];
+    var to = bidding[mode][2016][feature.properties.ZIP];
+
+  };
+
   var paint = function(feature) {
     var view = bidding[mode][year];
-    var value = view[feature.properties.ZIP];
-    var fillColor = "gray";
-    if (value) {
-      if (mode == "multipleBids") value = value.multiple_offers;
+    var zip = view[feature.properties.ZIP];
+    var fillColor = "transparent";
+    if (zip && zip.value) {
       for (var i = 0; i < scale.length; i++) {
         var pigment = scale[i];
-        if (value <= pigment.limit) {
+        if (zip.value <= pigment.limit) {
           fillColor = pigment.color;
           break;
         }
       }
-      if (fillColor == "gray") console.log(feature);
     }
     return {
       fillColor,
-      stroke: false,
+      weight: 1,
+      color: "rgba(0, 0, 0, .8)",
       fillOpacity: .7
     }
   };
@@ -67,7 +72,7 @@ xhr("./assets/king.geojson", function(err, data) {
         city = m.city;
       }
       if (bidding.aboveList[y][zip]) {
-        aboves.push({ year: y, value: bidding.aboveList[y][zip] });
+        aboves.push(bidding.aboveList[y][zip]);
       }
     }
     var data = {
@@ -75,7 +80,7 @@ xhr("./assets/king.geojson", function(err, data) {
       city,
       multiples,
       aboves
-    }
+    };
     console.log(aboves);
     map.openPopup(template(data), e.latlng)
   };
