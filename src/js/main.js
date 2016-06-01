@@ -38,7 +38,6 @@ xhr("./assets/king.geojson", function(err, data) {
     var fillColor = "transparent";
     if (from && to) {
       var difference = to.value - from.value;
-      console.log(feature.properties.ZIP, difference);
       for (var i = 0; i < scale.length; i++) {
         var pigment = scale[i];
         if (difference <= pigment.limit * .5) {
@@ -99,7 +98,6 @@ xhr("./assets/king.geojson", function(err, data) {
       multiples,
       aboves
     };
-    console.log(aboves);
     map.openPopup(template(data), e.latlng)
   };
 

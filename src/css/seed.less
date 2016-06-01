@@ -9,7 +9,7 @@
 .map-container {
   position: relative;
 
-  &::before {
+  .aspect-inner {
     display: block;
     content: "";
     padding-bottom: percentage(10 / 16);
@@ -29,6 +29,7 @@
     list-style-type: none;
     margin: 0;
     padding: 4px 0;
+    display: inline-block;
   }
 
   li {
@@ -38,7 +39,7 @@
   a {
     cursor: pointer;
     padding: 4px 8px;
-    margin: 0 4px;
+    margin: 0;
     border-radius: 4px;
 
     &.selected {

@@ -42,6 +42,9 @@ csv.multiple_bids.forEach(function(row) {
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <%= t.include("partials/_head.html") %>
+    <style>
+leaflet-map:not([ready]) { opacity: 0; }
+    </style>
   </head>
   <body>
 
@@ -52,6 +55,7 @@ csv.multiple_bids.forEach(function(row) {
             <li> <a class="switch-mode selected" data-mode="aboveList">Above list</a>
             <li> <a class="switch-mode" data-mode="multipleBids">Multiple bids</a>
           </ul>
+          |
           <ul class="year">
             <li> <a class="switch-year" data-year="delta">2015-2016</a>
             <% for (var y = 2016; y >= 2012; y--) { %>
@@ -60,9 +64,13 @@ csv.multiple_bids.forEach(function(row) {
           </ul>
         </nav>
         <div class="map-container">
-          <leaflet-map>
-            <tile-layer layer="cartoPositron"></tile-layer>
-          </leaflet-map>
+          <div class="aspect-inner">
+            <leaflet-map>
+              <map-options>{ "scrollWheelZoom": false }</map-options>
+              <tile-layer layer="cartoPositron"></tile-layer>
+            </leaflet-map>
+          </div>
+          <div class="map-key"></div>
         </div>
       </main>
     </responsive-child>
