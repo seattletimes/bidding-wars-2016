@@ -1,34 +1,47 @@
 <h1>
   <%= data.zip %> - 
-  <% if (data.city) { %>
-  <%= data.city %>, King County
-  <% } else { %>
-    King County
-  <% } %>
+  <%= data.post %>
 </h1>
-<div class="row">
-  <div class="cell">
-    <h2>Multiple offers</h2>
-    <% if (data.multiples.length) { %>
-    <ul>
-    <% data.multiples.forEach(function(row) { %>
-      <li> <%= row.year %> - <%= (row.value * 100).toFixed(1) %>%
-    <% }); %>
-    </ul>
-    <% } else { %>
-    No data
-    <% } %>
-  </div>
-  <div class="cell">
-    <h2>Above List</h2>
-    <% if (data.aboves.length) { %>
-    <ul>
-    <% data.aboves.forEach(function(row) { %>
-      <li> <%= row.year %> - <%= (row.value * 100).toFixed(1) %>%
-    <% }); %>
-    </ul>
-    <% } else { %>
-    No data
-    <% } %>
-  </div>
+<table>
+  <thead>
+    <tr>
+      <th>Homes with multiple offers</th>
+      <th>Homes sold above list price</th>
+      <th>Total homes sold</th>
+  <tbody>
+    <tr>
+      <td class="multiple">
+        <% if (data.multiples.length) { %>
+        <ul>
+        <% data.multiples.forEach(function(row) { %>
+          <li> <%= row.year %>: <%= (row.value * 100).toFixed(1) %>%
+        <% }); %>
+        </ul>
+        <% } else { %>
+        No data
+        <% } %>
+      </td>
+      <td class="above">
+        <% if (data.aboves.length) { %>
+        <ul>
+        <% data.aboves.forEach(function(row) { %>
+          <li> <%= row.year %>: <%= (row.value * 100).toFixed(1) %>%
+        <% }); %>
+        </ul>
+        <% } else { %>
+        No data
+        <% } %>
+      </td>
+      <td class="sold">
+        <% if (data.sold.length) { %>
+        <ul>
+        <% data.sold.forEach(function(row) { %>
+          <li> <%= row.year %>: <%= row.value < 10 ? "< 10" : row.value.toLocaleString().replace(/\.0+/, "") %>
+        <% }); %>
+        </ul>
+        <% } else { %>
+        No data
+        <% } %>
+      </td>
+</table>
 </div>

@@ -33,6 +33,15 @@ csv.multiple_bids.forEach(function(row) {
   }
 });
 
+var sales = {};
+csv.sales.forEach(function(row) {
+  if (!sales[row.year]) sales[row.year] = {};
+  sales[row.year][row.zip] = {
+    year: row.year,
+    value: row.sold
+  }
+});
+
 
 %><!doctype html>
 <html>
@@ -50,17 +59,21 @@ leaflet-map:not([ready]) { opacity: 0; }
 
     <responsive-child>
       <main class="interactive">
+        <h1>Bidding wars intensify</h1>
+        <p class="chatter">
+          In the past four years, real-estate bidding wars have become increasingly fierce in the Puget Sound area. Use the map below to explore this data for each year, or see the change over time in percentage points (pp).
+        </p>
         <nav class="controls">
           <ul class="mode">
             <li> <a class="switch-mode selected" data-mode="aboveList">Above list</a>
             <li> <a class="switch-mode" data-mode="multipleBids">Multiple bids</a>
+            <li> <a class="switch-mode" data-mode="sold">Total sold</a>
           </ul>
-          |
           <ul class="year">
-            <li> <a class="switch-year" data-year="delta">2015-2016</a>
             <% for (var y = 2016; y >= 2012; y--) { %>
             <li> <a class="switch-year <%= y == 2016 ? "selected" : "" %>" data-year="<%= y %>"><%= y %></a>
             <% } %>
+            <li> <a class="switch-year" data-year="delta">2012-2016</a>
           </ul>
         </nav>
         <div class="map-container">
@@ -70,7 +83,14 @@ leaflet-map:not([ready]) { opacity: 0; }
               <tile-layer layer="cartoPositron"></tile-layer>
             </leaflet-map>
           </div>
-          <div class="map-key"></div>
+          <div class="map-key">
+            <h2 class="title"></h2>
+            <div class="row">
+              <label class="small"></label>
+              <div class="bars"></div>
+              <label class="big"></label>
+            </div>
+          </div>
         </div>
       </main>
     </responsive-child>
@@ -78,7 +98,9 @@ leaflet-map:not([ready]) { opacity: 0; }
     <script>
 window.biddingData = {
   multipleBids: <%= JSON.stringify(multipleBids) %>,
-  aboveList: <%= JSON.stringify(aboveList) %>
+  aboveList: <%= JSON.stringify(aboveList) %>,
+  sold: <%= JSON.stringify(sales) %>,
+  maxSold: <%= Math.max.apply(null, csv.sales.map(function(d) { return d.sold || 0 })) %>
 };
     </script>
 
