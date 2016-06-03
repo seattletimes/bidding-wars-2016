@@ -7,6 +7,10 @@
   border-top: 1px solid @df-light-gray;
   border-bottom: 1px solid @df-light-gray;
   font-family: @df-sans;
+
+  @media @mobile {
+    padding: 20px 10px;
+  }
 }
 
 h1 {
@@ -60,20 +64,27 @@ h1 {
 
     .row {
       .display-flex();
+      padding-bottom: 20px;
+      position: relative;
     }
 
     label {
-      .flex(1 1 80px);
+      position: absolute;
+      top: 20px;
 
       &.small {
-        text-align: right;
+        left: 0;
+      }
+
+      &.big {
+        right: 0;
       }
     }
 
     .bars {
-      padding: 0 8px;
       .flex(1 1 200px);
       .display-flex();
+      height: 20px;
     }
 
     .bar {
@@ -91,26 +102,22 @@ h1 {
 
   ul {
     list-style-type: none;
-    margin: 0;
+    margin: 4px 0;
     padding: 4px 8px;
-    display: inline-block;
-
+    text-align: center;
+    display: block;
     @media @mobile {
-      text-align: center;
-      display: block;
-    }
+      border-bottom: 1px solid @df-light-gray;
 
-    &.mode {
-      border-right: 1px solid @df-dark-gray;
-
-      @media @mobile {
-        border-right: none;
+      &:first-child {
+        border-top: 1px solid @df-light-gray;
       }
     }
   }
 
   li {
     display: inline-block;
+    margin-bottom: 4px;
   }
 
   a {
