@@ -5,8 +5,8 @@
       "path": "bright-disjunction"
     },
     "live": {
-      "bucket": "",
-      "path": ""
+      "bucket": "projects.seattletimes.com",
+      "path": "2016/local/bidding-wars-map"
     }
   },
   "title": "",
@@ -16,6 +16,6 @@
   "tags": [],
   "image": "assets/social.jpg",
   "sheets": [],
-  "production": false,
+  "production": true,
   "embedded": true
 }
