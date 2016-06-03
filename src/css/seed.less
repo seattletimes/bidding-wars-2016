@@ -49,6 +49,7 @@ h1 {
     @media @mobile {
       position: static;
       width: 100%;
+      box-shadow: none;
     }
 
     h2 {
@@ -159,5 +160,26 @@ h1 {
     list-style-type: none;
     margin: 0;
     padding: 0;
+  }
+}
+
+.source {
+  font-size: 14px;
+  float: left;
+
+  @media @tablet {
+    float: none;
+  }
+}
+
+.credit {
+  float: right;
+  font-size: 14px;
+  font-style: italic;
+
+  @media @tablet {
+    float: none;
+    display: block;
+    text-align: right;
   }
 }
